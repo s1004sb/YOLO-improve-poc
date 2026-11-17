@@ -1,0 +1,367 @@
+{
+  "image": "bus.jpg",
+  "width": 810,
+  "height": 1080,
+  "settings": {
+    "baseline_conf": 0.25,
+    "helper_conf": 0.1,
+    "imgsz": 640,
+    "device": "cpu"
+  },
+  "baseline": [
+    {
+      "class_name": "bus",
+      "score": 0.881,
+      "xyxy": [
+        0.0,
+        230.5,
+        803.2,
+        750.7
+      ],
+      "source": "baseline"
+    },
+    {
+      "class_name": "person",
+      "score": 0.872,
+      "xyxy": [
+        48.6,
+        397.7,
+        240.3,
+        902.4
+      ],
+      "source": "baseline"
+    },
+    {
+      "class_name": "person",
+      "score": 0.861,
+      "xyxy": [
+        222.9,
+        404.8,
+        345.5,
+        861.0
+      ],
+      "source": "baseline"
+    },
+    {
+      "class_name": "person",
+      "score": 0.846,
+      "xyxy": [
+        669.6,
+        394.5,
+        809.9,
+        879.4
+      ],
+      "source": "baseline"
+    },
+    {
+      "class_name": "person",
+      "score": 0.656,
+      "xyxy": [
+        0.2,
+        553.0,
+        59.7,
+        871.3
+      ],
+      "source": "baseline"
+    }
+  ],
+  "bigger_yolo": [
+    {
+      "class_name": "person",
+      "score": 0.937,
+      "xyxy": [
+        669.0,
+        392.8,
+        809.5,
+        881.7
+      ],
+      "source": "bigger"
+    },
+    {
+      "class_name": "person",
+      "score": 0.936,
+      "xyxy": [
+        49.8,
+        400.4,
+        246.8,
+        904.5
+      ],
+      "source": "bigger"
+    },
+    {
+      "class_name": "bus",
+      "score": 0.921,
+      "xyxy": [
+        0.0,
+        229.0,
+        809.6,
+        734.4
+      ],
+      "source": "bigger"
+    },
+    {
+      "class_name": "person",
+      "score": 0.898,
+      "xyxy": [
+        223.2,
+        405.3,
+        344.7,
+        860.7
+      ],
+      "source": "bigger"
+    },
+    {
+      "class_name": "person",
+      "score": 0.858,
+      "xyxy": [
+        0.2,
+        552.3,
+        79.3,
+        873.3
+      ],
+      "source": "bigger"
+    },
+    {
+      "class_name": "traffic light",
+      "score": 0.213,
+      "xyxy": [
+        428.6,
+        150.3,
+        530.5,
+        189.9
+      ],
+      "source": "bigger"
+    }
+  ],
+  "text_prompts": [
+    "person",
+    "bus",
+    "cell phone",
+    "tie",
+    "handbag",
+    "backpack",
+    "cup",
+    "bottle"
+  ],
+  "text_stage": "실행함",
+  "text_yoloe": [
+    {
+      "class_name": "bus",
+      "score": 0.902,
+      "xyxy": [
+        0.0,
+        232.4,
+        803.6,
+        736.7
+      ],
+      "source": "text"
+    },
+    {
+      "class_name": "person",
+      "score": 0.886,
+      "xyxy": [
+        672.5,
+        386.3,
+        810.0,
+        876.9
+      ],
+      "source": "text"
+    },
+    {
+      "class_name": "person",
+      "score": 0.876,
+      "xyxy": [
+        52.4,
+        401.7,
+        242.6,
+        900.1
+      ],
+      "source": "text"
+    },
+    {
+      "class_name": "person",
+      "score": 0.874,
+      "xyxy": [
+        225.2,
+        406.7,
+        340.6,
+        858.1
+      ],
+      "source": "text"
+    },
+    {
+      "class_name": "person",
+      "score": 0.586,
+      "xyxy": [
+        0.0,
+        478.7,
+        76.4,
+        896.1
+      ],
+      "source": "text"
+    },
+    {
+      "class_name": "tie",
+      "score": 0.106,
+      "xyxy": [
+        284.7,
+        477.9,
+        301.8,
+        521.6
+      ],
+      "source": "text"
+    }
+  ],
+  "masks": [
+    {
+      "class_name": "bus",
+      "xyxy": [
+        0.0,
+        230.5,
+        803.2,
+        750.7
+      ],
+      "yolo_mask_px": 255375,
+      "sam_mask_px": 264292,
+      "added_by_sam_px": 13581,
+      "removed_by_sam_px": 4664
+    },
+    {
+      "class_name": "person",
+      "xyxy": [
+        48.6,
+        397.7,
+        240.3,
+        902.4
+      ],
+      "yolo_mask_px": 49302,
+      "sam_mask_px": 47278,
+      "added_by_sam_px": 443,
+      "removed_by_sam_px": 2467
+    },
+    {
+      "class_name": "person",
+      "xyxy": [
+        222.9,
+        404.8,
+        345.5,
+        861.0
+      ],
+      "yolo_mask_px": 33411,
+      "sam_mask_px": 33196,
+      "added_by_sam_px": 1229,
+      "removed_by_sam_px": 1444
+    },
+    {
+      "class_name": "person",
+      "xyxy": [
+        669.6,
+        394.5,
+        809.9,
+        879.4
+      ],
+      "yolo_mask_px": 21311,
+      "sam_mask_px": 21274,
+      "added_by_sam_px": 1163,
+      "removed_by_sam_px": 1200
+    },
+    {
+      "class_name": "person",
+      "xyxy": [
+        0.2,
+        553.0,
+        59.7,
+        871.3
+      ],
+      "yolo_mask_px": 11100,
+      "sam_mask_px": 9799,
+      "added_by_sam_px": 344,
+      "removed_by_sam_px": 1645
+    }
+  ],
+  "review_candidates": [
+    {
+      "kind": "missed?",
+      "why": "보조 모델(bigger)만 찾음 - 기준선이 놓쳤을 수 있음",
+      "class_name": "traffic light",
+      "score": 0.213,
+      "xyxy": [
+        428.6,
+        150.3,
+        530.5,
+        189.9
+      ],
+      "source": "bigger",
+      "id": 0,
+      "crop": "candidates/c00.jpg"
+    },
+    {
+      "kind": "missed?",
+      "why": "보조 모델(text)만 찾음 - 기준선이 놓쳤을 수 있음",
+      "class_name": "tie",
+      "score": 0.106,
+      "xyxy": [
+        284.7,
+        477.9,
+        301.8,
+        521.6
+      ],
+      "source": "text",
+      "id": 1,
+      "crop": "candidates/c01.jpg"
+    },
+    {
+      "kind": "mask-gap?",
+      "class_name": "bus",
+      "score": 0.0,
+      "source": "sam",
+      "why": "SAM이 7,832px 를 더 칠함 - 기존 마스크의 구멍일 수 있음",
+      "xyxy": [
+        160,
+        466,
+        243,
+        725
+      ],
+      "id": 2,
+      "crop": "candidates/c02.jpg"
+    },
+    {
+      "kind": "mask-gap?",
+      "class_name": "person",
+      "score": 0.0,
+      "source": "sam",
+      "why": "SAM이 909px 를 더 칠함 - 기존 마스크의 구멍일 수 있음",
+      "xyxy": [
+        314,
+        623,
+        340,
+        747
+      ],
+      "id": 3,
+      "crop": "candidates/c03.jpg"
+    },
+    {
+      "kind": "mask-gap?",
+      "class_name": "person",
+      "score": 0.0,
+      "source": "sam",
+      "why": "SAM이 1,086px 를 더 칠함 - 기존 마스크의 구멍일 수 있음",
+      "xyxy": [
+        722,
+        543,
+        763,
+        599
+      ],
+      "id": 4,
+      "crop": "candidates/c04.jpg"
+    }
+  ],
+  "timing_sec": {
+    "1_baseline_det": 9.57,
+    "1_baseline_seg": 0.76,
+    "2_bigger_yolo": 1.38,
+    "3_text_yoloe": 0.94,
+    "4_sam": 5.34
+  },
+  "total_sec": 17.99
+}

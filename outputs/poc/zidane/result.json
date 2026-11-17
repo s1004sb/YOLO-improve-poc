@@ -1,0 +1,323 @@
+{
+  "image": "zidane.jpg",
+  "width": 1280,
+  "height": 720,
+  "settings": {
+    "baseline_conf": 0.25,
+    "helper_conf": 0.1,
+    "imgsz": 640,
+    "device": "cpu"
+  },
+  "baseline": [
+    {
+      "class_name": "person",
+      "score": 0.895,
+      "xyxy": [
+        742.2,
+        40.1,
+        1150.8,
+        708.5
+      ],
+      "source": "baseline"
+    },
+    {
+      "class_name": "person",
+      "score": 0.853,
+      "xyxy": [
+        119.2,
+        201.7,
+        1000.2,
+        712.8
+      ],
+      "source": "baseline"
+    },
+    {
+      "class_name": "tie",
+      "score": 0.584,
+      "xyxy": [
+        436.0,
+        434.6,
+        526.2,
+        715.7
+      ],
+      "source": "baseline"
+    }
+  ],
+  "bigger_yolo": [
+    {
+      "class_name": "person",
+      "score": 0.925,
+      "xyxy": [
+        122.4,
+        200.9,
+        1095.4,
+        714.9
+      ],
+      "source": "bigger"
+    },
+    {
+      "class_name": "person",
+      "score": 0.918,
+      "xyxy": [
+        746.4,
+        40.7,
+        1152.4,
+        716.7
+      ],
+      "source": "bigger"
+    },
+    {
+      "class_name": "tie",
+      "score": 0.872,
+      "xyxy": [
+        434.0,
+        434.9,
+        527.3,
+        715.8
+      ],
+      "source": "bigger"
+    },
+    {
+      "class_name": "tie",
+      "score": 0.169,
+      "xyxy": [
+        993.6,
+        317.9,
+        1143.5,
+        704.0
+      ],
+      "source": "bigger"
+    },
+    {
+      "class_name": "person",
+      "score": 0.152,
+      "xyxy": [
+        0.4,
+        396.4,
+        172.3,
+        718.2
+      ],
+      "source": "bigger"
+    },
+    {
+      "class_name": "tie",
+      "score": 0.115,
+      "xyxy": [
+        991.5,
+        315.1,
+        1026.7,
+        414.6
+      ],
+      "source": "bigger"
+    }
+  ],
+  "text_prompts": [
+    "person",
+    "bus",
+    "cell phone",
+    "tie",
+    "handbag",
+    "backpack",
+    "cup",
+    "bottle"
+  ],
+  "text_stage": "실행함",
+  "text_yoloe": [
+    {
+      "class_name": "person",
+      "score": 0.909,
+      "xyxy": [
+        748.9,
+        44.9,
+        1151.0,
+        718.8
+      ],
+      "source": "text"
+    },
+    {
+      "class_name": "person",
+      "score": 0.844,
+      "xyxy": [
+        127.5,
+        204.2,
+        1076.1,
+        717.8
+      ],
+      "source": "text"
+    },
+    {
+      "class_name": "tie",
+      "score": 0.708,
+      "xyxy": [
+        435.3,
+        433.4,
+        527.8,
+        719.3
+      ],
+      "source": "text"
+    },
+    {
+      "class_name": "tie",
+      "score": 0.192,
+      "xyxy": [
+        1047.5,
+        481.5,
+        1134.3,
+        700.9
+      ],
+      "source": "text"
+    },
+    {
+      "class_name": "tie",
+      "score": 0.115,
+      "xyxy": [
+        992.2,
+        312.7,
+        1027.1,
+        408.5
+      ],
+      "source": "text"
+    }
+  ],
+  "masks": [
+    {
+      "class_name": "person",
+      "xyxy": [
+        742.2,
+        40.1,
+        1150.8,
+        708.5
+      ],
+      "yolo_mask_px": 170687,
+      "sam_mask_px": 154450,
+      "added_by_sam_px": 2731,
+      "removed_by_sam_px": 18968
+    },
+    {
+      "class_name": "person",
+      "xyxy": [
+        119.2,
+        201.7,
+        1000.2,
+        712.8
+      ],
+      "yolo_mask_px": 228686,
+      "sam_mask_px": 230012,
+      "added_by_sam_px": 11799,
+      "removed_by_sam_px": 10473
+    },
+    {
+      "class_name": "tie",
+      "xyxy": [
+        436.0,
+        434.6,
+        526.2,
+        715.7
+      ],
+      "yolo_mask_px": 9998,
+      "sam_mask_px": 9512,
+      "added_by_sam_px": 251,
+      "removed_by_sam_px": 737
+    }
+  ],
+  "review_candidates": [
+    {
+      "kind": "missed?",
+      "why": "보조 모델(text)만 찾음 - 기준선이 놓쳤을 수 있음",
+      "class_name": "tie",
+      "score": 0.192,
+      "xyxy": [
+        1047.5,
+        481.5,
+        1134.3,
+        700.9
+      ],
+      "source": "text",
+      "id": 0,
+      "crop": "candidates/c00.jpg"
+    },
+    {
+      "kind": "missed?",
+      "why": "보조 모델(bigger)만 찾음 - 기준선이 놓쳤을 수 있음",
+      "class_name": "tie",
+      "score": 0.169,
+      "xyxy": [
+        993.6,
+        317.9,
+        1143.5,
+        704.0
+      ],
+      "source": "bigger",
+      "id": 1,
+      "crop": "candidates/c01.jpg"
+    },
+    {
+      "kind": "missed?",
+      "why": "보조 모델(bigger)만 찾음 - 기준선이 놓쳤을 수 있음",
+      "class_name": "person",
+      "score": 0.152,
+      "xyxy": [
+        0.4,
+        396.4,
+        172.3,
+        718.2
+      ],
+      "source": "bigger",
+      "id": 2,
+      "crop": "candidates/c02.jpg"
+    },
+    {
+      "kind": "missed?",
+      "why": "보조 모델(bigger+text)만 찾음 - 기준선이 놓쳤을 수 있음",
+      "class_name": "tie",
+      "score": 0.115,
+      "xyxy": [
+        991.5,
+        315.1,
+        1026.7,
+        414.6
+      ],
+      "source": "bigger+text",
+      "id": 3,
+      "crop": "candidates/c03.jpg"
+    },
+    {
+      "kind": "mask-gap?",
+      "class_name": "person",
+      "score": 0.0,
+      "source": "sam",
+      "why": "SAM이 1,716px 를 더 칠함 - 기존 마스크의 구멍일 수 있음",
+      "xyxy": [
+        762,
+        710,
+        1106,
+        720
+      ],
+      "id": 4,
+      "crop": "candidates/c04.jpg"
+    },
+    {
+      "kind": "mask-gap?",
+      "class_name": "person",
+      "score": 0.0,
+      "source": "sam",
+      "why": "SAM이 11,757px 를 더 칠함 - 기존 마스크의 구멍일 수 있음",
+      "xyxy": [
+        122,
+        441,
+        634,
+        720
+      ],
+      "id": 5,
+      "crop": "candidates/c05.jpg"
+    }
+  ],
+  "timing_sec": {
+    "1_baseline_det": 0.31,
+    "1_baseline_seg": 0.24,
+    "2_bigger_yolo": 1.2,
+    "3_text_yoloe": 0.54,
+    "4_sam": 4.79
+  },
+  "total_sec": 7.09
+}

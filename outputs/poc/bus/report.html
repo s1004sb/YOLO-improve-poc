@@ -1,0 +1,15 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>검토 목록 - bus.jpg</title>
+<style>body{font-family:'Malgun Gothic',sans-serif;max-width:1100px;margin:24px auto;padding:0 16px;color:#222}
+figure{display:inline-block;margin:6px;vertical-align:top}figure img{height:300px}figcaption{font-size:13px;text-align:center}
+table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border:1px solid #ccc;padding:6px 8px;vertical-align:top}
+th{background:#f3f3f3}td img{max-height:200px}.chk{white-space:nowrap}small{color:#666}</style>
+<h1>검토 목록 — bus.jpg</h1>
+<p>사진 전체를 훑는 대신 <b>아래 5곳만</b> 확인하면 됩니다. 모델끼리 결과가 다른 곳만 모았습니다.
+AI의 제안일 뿐이므로 <b>사람이 맞음/아님을 표시</b>해야 합니다.</p>
+<p><small>처리 시간(CPU): 합계 17.99s — 1_baseline_det 9.57s · 1_baseline_seg 0.76s · 2_bigger_yolo 1.38s · 3_text_yoloe 0.94s · 4_sam 5.34s<br>글자 지목 단계: 실행함</small></p>
+<figure><img src="original.jpg"><figcaption>원본</figcaption></figure><figure><img src="1_baseline.jpg"><figcaption>① 기준선 (기존 방식)</figcaption></figure><figure><img src="2_3_helpers.jpg"><figcaption>②③ 보조 모델이 추가로 가리킨 곳 (굵은 박스)</figcaption></figure><figure><img src="1_baseline_mask.jpg"><figcaption>① 기존 마스크</figcaption></figure><figure><img src="4_sam_mask.jpg"><figcaption>④ SAM 마스크</figcaption></figure>
+<h2>확인할 곳</h2>
+<table><tr><th>#</th><th>종류</th><th>이유</th><th>잘라 본 그림</th><th>사람 확인</th></tr><tr><td>0</td><td><b>놓쳤을 수 있음</b><br>traffic light 0.21</td><td>보조 모델(bigger)만 찾음 - 기준선이 놓쳤을 수 있음<br><small>좌표 [428, 150, 530, 189]</small></td><td><img src="candidates/c00.jpg"></td><td class="chk">□ 맞음 &nbsp; □ 아님</td></tr><tr><td>1</td><td><b>놓쳤을 수 있음</b><br>tie 0.11</td><td>보조 모델(text)만 찾음 - 기준선이 놓쳤을 수 있음<br><small>좌표 [284, 477, 301, 521]</small></td><td><img src="candidates/c01.jpg"></td><td class="chk">□ 맞음 &nbsp; □ 아님</td></tr><tr><td>2</td><td><b>마스크 구멍일 수 있음</b><br>bus</td><td>SAM이 7,832px 를 더 칠함 - 기존 마스크의 구멍일 수 있음<br><small>좌표 [160, 466, 243, 725]</small></td><td><img src="candidates/c02.jpg"></td><td class="chk">□ 맞음 &nbsp; □ 아님</td></tr><tr><td>3</td><td><b>마스크 구멍일 수 있음</b><br>person</td><td>SAM이 909px 를 더 칠함 - 기존 마스크의 구멍일 수 있음<br><small>좌표 [314, 623, 340, 747]</small></td><td><img src="candidates/c03.jpg"></td><td class="chk">□ 맞음 &nbsp; □ 아님</td></tr><tr><td>4</td><td><b>마스크 구멍일 수 있음</b><br>person</td><td>SAM이 1,086px 를 더 칠함 - 기존 마스크의 구멍일 수 있음<br><small>좌표 [722, 543, 763, 599]</small></td><td><img src="candidates/c04.jpg"></td><td class="chk">□ 맞음 &nbsp; □ 아님</td></tr></table>
+<h2>마스크 비교 (기존 YOLO-seg vs SAM)</h2>
+<table><tr><th>물체</th><th>기존 마스크(px)</th><th>SAM 마스크(px)</th><th>SAM이 더 칠함</th><th>SAM이 뺌</th></tr><tr><td>bus</td><td>255,375</td><td>264,292</td><td>+13,581</td><td>-4,664</td></tr><tr><td>person</td><td>49,302</td><td>47,278</td><td>+443</td><td>-2,467</td></tr><tr><td>person</td><td>33,411</td><td>33,196</td><td>+1,229</td><td>-1,444</td></tr><tr><td>person</td><td>21,311</td><td>21,274</td><td>+1,163</td><td>-1,200</td></tr><tr><td>person</td><td>11,100</td><td>9,799</td><td>+344</td><td>-1,645</td></tr></table>
+</html>

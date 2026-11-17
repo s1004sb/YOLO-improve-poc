@@ -1,0 +1,5 @@
+{
+  "bus.jpg": "Ultralytics 공식 예제 이미지 (ultralytics 파이썬 패키지 안의 ultralytics/assets/bus.jpg). Ultralytics 저장소 라이선스(AGPL-3.0) 조건을 따름. 인터넷에서 따로 받지 않고 설치된 패키지에서 복사함.",
+  "zidane.jpg": "Ultralytics 공식 예제 이미지 (ultralytics/assets/zidane.jpg). 실제 인물이 나온 보도 사진이라 이 저장소에는 올리지 않음. prepare_samples.py 로 설치된 패키지에서 복사해 재현함.",
+  "_원칙": "공개·공유에 문제가 없는 사진만 사용한다. 직접 찍은 사진을 추가할 때는 사람 얼굴·개인정보가 없는 사진만 넣고 여기에 출처를 적는다."
+}

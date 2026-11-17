@@ -1,0 +1,11 @@
+# torch / torchvision 은 CPU판을 먼저 설치하세요 (README 2장 참고)
+ultralytics==8.4.210
+opencv-python==5.0.0.93
+numpy==2.5.4
+
+# (선택) 글자로 찾는 단계(YOLOE)에만 필요. 없으면 그 단계는 자동으로 건너뜁니다.
+# 2026-11-17 에 내용을 검토한 버전으로 고정했습니다.
+clip @ git+https://github.com/ultralytics/CLIP.git@7ffa84b3bfa40c42ecc1c77147a855e69cb2dd40
+ftfy==6.3.1
+regex==2026.11.15
+tqdm==4.70.1

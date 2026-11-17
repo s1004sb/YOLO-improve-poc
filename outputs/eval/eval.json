@@ -1,0 +1,199 @@
+{
+  "images": [
+    "bus.jpg",
+    "zidane.jpg"
+  ],
+  "gt_objects": 10,
+  "detection": [
+    {
+      "method": "기존: yolo26n 640 conf0.25",
+      "found": 8,
+      "total": 10,
+      "false": 0,
+      "sec_per_image": 0.14,
+      "missed": [
+        "bus.jpg: cell phone (검은 코트 남자가 손에 든 휴대폰 (지난 과제 대조 기록 #2))",
+        "zidane.jpg: tie (오른쪽 남자의 넥타이 (어둡고 일부만 보임))"
+      ],
+      "false_list": []
+    },
+    {
+      "method": "yolo26n 1280 conf0.25",
+      "found": 7,
+      "total": 10,
+      "false": 2,
+      "sec_per_image": 0.51,
+      "missed": [
+        "bus.jpg: cell phone (검은 코트 남자가 손에 든 휴대폰 (지난 과제 대조 기록 #2))",
+        "zidane.jpg: person (왼쪽 남자 (뻗은 팔 포함))",
+        "zidane.jpg: tie (오른쪽 남자의 넥타이 (어둡고 일부만 보임))"
+      ],
+      "false_list": [
+        "bus.jpg: stop sign 0.30 [0, 253, 33, 325]",
+        "zidane.jpg: person 0.49 [161, 202, 671, 714]"
+      ]
+    },
+    {
+      "method": "yolo26s 640 conf0.25",
+      "found": 8,
+      "total": 10,
+      "false": 0,
+      "sec_per_image": 0.3,
+      "missed": [
+        "bus.jpg: cell phone (검은 코트 남자가 손에 든 휴대폰 (지난 과제 대조 기록 #2))",
+        "zidane.jpg: tie (오른쪽 남자의 넥타이 (어둡고 일부만 보임))"
+      ],
+      "false_list": []
+    },
+    {
+      "method": "yolo26m 640 conf0.25",
+      "found": 8,
+      "total": 10,
+      "false": 0,
+      "sec_per_image": 0.82,
+      "missed": [
+        "bus.jpg: cell phone (검은 코트 남자가 손에 든 휴대폰 (지난 과제 대조 기록 #2))",
+        "zidane.jpg: tie (오른쪽 남자의 넥타이 (어둡고 일부만 보임))"
+      ],
+      "false_list": []
+    },
+    {
+      "method": "yolo26m 640 conf0.10",
+      "found": 9,
+      "total": 10,
+      "false": 3,
+      "sec_per_image": 0.89,
+      "missed": [
+        "bus.jpg: cell phone (검은 코트 남자가 손에 든 휴대폰 (지난 과제 대조 기록 #2))"
+      ],
+      "false_list": [
+        "bus.jpg: traffic light 0.21 [428, 150, 530, 189]",
+        "zidane.jpg: tie 0.17 [993, 317, 1143, 704]",
+        "zidane.jpg: person 0.15 [0, 396, 172, 718]"
+      ]
+    },
+    {
+      "method": "yolo26m 1280 conf0.10",
+      "found": 8,
+      "total": 10,
+      "false": 3,
+      "sec_per_image": 5.03,
+      "missed": [
+        "bus.jpg: cell phone (검은 코트 남자가 손에 든 휴대폰 (지난 과제 대조 기록 #2))",
+        "zidane.jpg: tie (오른쪽 남자의 넥타이 (어둡고 일부만 보임))"
+      ],
+      "false_list": [
+        "bus.jpg: stop sign 0.14 [0, 255, 32, 324]",
+        "zidane.jpg: person 0.68 [135, 71, 700, 712]",
+        "zidane.jpg: tie 0.34 [1045, 465, 1137, 705]"
+      ]
+    },
+    {
+      "method": "YOLOE(글자 지목) 640 conf0.25",
+      "found": 8,
+      "total": 10,
+      "false": 0,
+      "sec_per_image": 2.25,
+      "missed": [
+        "bus.jpg: cell phone (검은 코트 남자가 손에 든 휴대폰 (지난 과제 대조 기록 #2))",
+        "zidane.jpg: tie (오른쪽 남자의 넥타이 (어둡고 일부만 보임))"
+      ],
+      "false_list": []
+    },
+    {
+      "method": "YOLOE(글자 지목) 1280 conf0.25",
+      "found": 6,
+      "total": 10,
+      "false": 4,
+      "sec_per_image": 3.37,
+      "missed": [
+        "bus.jpg: cell phone (검은 코트 남자가 손에 든 휴대폰 (지난 과제 대조 기록 #2))",
+        "zidane.jpg: person (왼쪽 남자 (뻗은 팔 포함))",
+        "zidane.jpg: tie (왼쪽 남자의 넥타이)",
+        "zidane.jpg: tie (오른쪽 남자의 넥타이 (어둡고 일부만 보임))"
+      ],
+      "false_list": [
+        "bus.jpg: bus 0.44 [10, 232, 602, 565]",
+        "bus.jpg: tie 0.38 [137, 475, 149, 505]",
+        "zidane.jpg: person 0.83 [178, 87, 722, 720]",
+        "zidane.jpg: person 0.35 [344, 151, 883, 720]"
+      ]
+    },
+    {
+      "method": "YOLOE(글자 지목) 640 conf0.10",
+      "found": 9,
+      "total": 10,
+      "false": 2,
+      "sec_per_image": 1.51,
+      "missed": [
+        "bus.jpg: cell phone (검은 코트 남자가 손에 든 휴대폰 (지난 과제 대조 기록 #2))"
+      ],
+      "false_list": [
+        "bus.jpg: tie 0.11 [284, 477, 301, 521]",
+        "zidane.jpg: tie 0.19 [1047, 481, 1134, 700]"
+      ]
+    },
+    {
+      "method": "YOLOE(글자 지목) 1280 conf0.10",
+      "found": 8,
+      "total": 10,
+      "false": 7,
+      "sec_per_image": 2.49,
+      "missed": [
+        "bus.jpg: cell phone (검은 코트 남자가 손에 든 휴대폰 (지난 과제 대조 기록 #2))",
+        "zidane.jpg: person (왼쪽 남자 (뻗은 팔 포함))"
+      ],
+      "false_list": [
+        "bus.jpg: bus 0.44 [10, 232, 602, 565]",
+        "bus.jpg: tie 0.38 [137, 475, 149, 505]",
+        "bus.jpg: tie 0.14 [287, 478, 301, 522]",
+        "zidane.jpg: person 0.83 [178, 87, 722, 720]",
+        "zidane.jpg: person 0.35 [344, 151, 883, 720]",
+        "zidane.jpg: tie 0.20 [1047, 446, 1138, 702]",
+        "zidane.jpg: tie 0.11 [484, 430, 587, 606]"
+      ]
+    }
+  ],
+  "mask": [
+    {
+      "image": "bus.jpg",
+      "region": "두 남자 사이로 보이는 버스 옆면",
+      "region_px": 5929,
+      "yolo_seg_cover": 0.056,
+      "sam_cover": 0.893,
+      "yolo_seg_sec": 0.74,
+      "sam_sec": 5.37
+    }
+  ],
+  "review": [
+    {
+      "image": "bus.jpg",
+      "candidates_total": 5,
+      "missed_candidates": 2,
+      "missed_candidates_that_are_real": 0,
+      "baseline_missed": [
+        "cell phone (검은 코트 남자가 손에 든 휴대폰 (지난 과제 대조 기록 #2))"
+      ],
+      "baseline_missed_caught_in_list": [],
+      "mask_gap_candidates": 3,
+      "pipeline_total_sec": 17.99,
+      "text_stage": "실행함"
+    },
+    {
+      "image": "zidane.jpg",
+      "candidates_total": 6,
+      "missed_candidates": 4,
+      "missed_candidates_that_are_real": 1,
+      "baseline_missed": [
+        "tie (오른쪽 남자의 넥타이 (어둡고 일부만 보임))"
+      ],
+      "baseline_missed_caught_in_list": [
+        "tie (오른쪽 남자의 넥타이 (어둡고 일부만 보임))"
+      ],
+      "mask_gap_candidates": 2,
+      "pipeline_total_sec": 7.09,
+      "text_stage": "실행함"
+    }
+  ],
+  "text_stage": "실행함, 지목한 글자: ['bus', 'cell phone', 'person', 'tie']"
+}

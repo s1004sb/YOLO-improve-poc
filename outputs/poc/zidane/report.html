@@ -1,0 +1,15 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>검토 목록 - zidane.jpg</title>
+<style>body{font-family:'Malgun Gothic',sans-serif;max-width:1100px;margin:24px auto;padding:0 16px;color:#222}
+figure{display:inline-block;margin:6px;vertical-align:top}figure img{height:300px}figcaption{font-size:13px;text-align:center}
+table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border:1px solid #ccc;padding:6px 8px;vertical-align:top}
+th{background:#f3f3f3}td img{max-height:200px}.chk{white-space:nowrap}small{color:#666}</style>
+<h1>검토 목록 — zidane.jpg</h1>
+<p>사진 전체를 훑는 대신 <b>아래 6곳만</b> 확인하면 됩니다. 모델끼리 결과가 다른 곳만 모았습니다.
+AI의 제안일 뿐이므로 <b>사람이 맞음/아님을 표시</b>해야 합니다.</p>
+<p><small>처리 시간(CPU): 합계 7.09s — 1_baseline_det 0.31s · 1_baseline_seg 0.24s · 2_bigger_yolo 1.2s · 3_text_yoloe 0.54s · 4_sam 4.79s<br>글자 지목 단계: 실행함</small></p>
+<figure><img src="original.jpg"><figcaption>원본</figcaption></figure><figure><img src="1_baseline.jpg"><figcaption>① 기준선 (기존 방식)</figcaption></figure><figure><img src="2_3_helpers.jpg"><figcaption>②③ 보조 모델이 추가로 가리킨 곳 (굵은 박스)</figcaption></figure><figure><img src="1_baseline_mask.jpg"><figcaption>① 기존 마스크</figcaption></figure><figure><img src="4_sam_mask.jpg"><figcaption>④ SAM 마스크</figcaption></figure>
+<h2>확인할 곳</h2>
+<table><tr><th>#</th><th>종류</th><th>이유</th><th>잘라 본 그림</th><th>사람 확인</th></tr><tr><td>0</td><td><b>놓쳤을 수 있음</b><br>tie 0.19</td><td>보조 모델(text)만 찾음 - 기준선이 놓쳤을 수 있음<br><small>좌표 [1047, 481, 1134, 700]</small></td><td><img src="candidates/c00.jpg"></td><td class="chk">□ 맞음 &nbsp; □ 아님</td></tr><tr><td>1</td><td><b>놓쳤을 수 있음</b><br>tie 0.17</td><td>보조 모델(bigger)만 찾음 - 기준선이 놓쳤을 수 있음<br><small>좌표 [993, 317, 1143, 704]</small></td><td><img src="candidates/c01.jpg"></td><td class="chk">□ 맞음 &nbsp; □ 아님</td></tr><tr><td>2</td><td><b>놓쳤을 수 있음</b><br>person 0.15</td><td>보조 모델(bigger)만 찾음 - 기준선이 놓쳤을 수 있음<br><small>좌표 [0, 396, 172, 718]</small></td><td><img src="candidates/c02.jpg"></td><td class="chk">□ 맞음 &nbsp; □ 아님</td></tr><tr><td>3</td><td><b>놓쳤을 수 있음</b><br>tie 0.12</td><td>보조 모델(bigger+text)만 찾음 - 기준선이 놓쳤을 수 있음<br><small>좌표 [991, 315, 1026, 414]</small></td><td><img src="candidates/c03.jpg"></td><td class="chk">□ 맞음 &nbsp; □ 아님</td></tr><tr><td>4</td><td><b>마스크 구멍일 수 있음</b><br>person</td><td>SAM이 1,716px 를 더 칠함 - 기존 마스크의 구멍일 수 있음<br><small>좌표 [762, 710, 1106, 720]</small></td><td><img src="candidates/c04.jpg"></td><td class="chk">□ 맞음 &nbsp; □ 아님</td></tr><tr><td>5</td><td><b>마스크 구멍일 수 있음</b><br>person</td><td>SAM이 11,757px 를 더 칠함 - 기존 마스크의 구멍일 수 있음<br><small>좌표 [122, 441, 634, 720]</small></td><td><img src="candidates/c05.jpg"></td><td class="chk">□ 맞음 &nbsp; □ 아님</td></tr></table>
+<h2>마스크 비교 (기존 YOLO-seg vs SAM)</h2>
+<table><tr><th>물체</th><th>기존 마스크(px)</th><th>SAM 마스크(px)</th><th>SAM이 더 칠함</th><th>SAM이 뺌</th></tr><tr><td>person</td><td>170,687</td><td>154,450</td><td>+2,731</td><td>-18,968</td></tr><tr><td>person</td><td>228,686</td><td>230,012</td><td>+11,799</td><td>-10,473</td></tr><tr><td>tie</td><td>9,998</td><td>9,512</td><td>+251</td><td>-737</td></tr></table>
+</html>

@@ -1,0 +1,14 @@
+[
+  {
+    "image": "bus.jpg",
+    "baseline": 5,
+    "candidates": 5,
+    "total_sec": 17.99
+  },
+  {
+    "image": "zidane.jpg",
+    "baseline": 3,
+    "candidates": 6,
+    "total_sec": 7.09
+  }
+]

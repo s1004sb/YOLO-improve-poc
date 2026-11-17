@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# 모델 파일은 크고(합계 약 500MB) 공식 출처에서 다시 받을 수 있어 올리지 않음 -> download_models.py
+models/*.pt
+models/*.ts
+models/*.part
+
+# 실제 인물이 나온 예제 사진과 그 결과 그림은 올리지 않음 (숫자·JSON 은 올림) -> prepare_samples.py
+data/samples/zidane.jpg
+outputs/poc/zidane/*.jpg
+outputs/poc/zidane/candidates/
+outputs/eval/gt_zidane.jpg
