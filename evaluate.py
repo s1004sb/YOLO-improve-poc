@@ -65,6 +65,30 @@ def label(g: dict) -> str:
     return g["class"] + (f' ({g["note"]})' if g.get("note") else "")
 
 
+def save_small_zooms(images: dict) -> list[dict]:
+    """작은 정답 물체(small=true)를 5배 확대해 저장하고, 크기를 숫자로 남긴다. (왜 놓쳤는지 살펴보는 근거)"""
+    rows = []
+    for n, img in images.items():
+        h, w = img.shape[:2]
+        for g in GT[n]["objects"]:
+            if not g.get("small"):
+                continue
+            x1, y1, x2, y2 = g["xyxy"]
+            cx, cy = (x1 + x2) // 2, (y1 + y2) // 2
+            a, b, c, d = max(0, cx - 50), max(0, cy - 50), min(w, cx + 50), min(h, cy + 50)
+            crop = img[b:d, a:c].copy()
+            cv2.rectangle(crop, (x1 - a, y1 - b), (x2 - a, y2 - b), (0, 255, 255), 1)
+            crop = cv2.resize(crop, None, fx=5, fy=5, interpolation=cv2.INTER_CUBIC)
+            name = f'zoom_{Path(n).stem}_{g["class"].replace(" ", "_")}.jpg'
+            imwrite(OUT / name, crop)
+            scale = poc.IMGSZ / max(h, w)                      # 모델에 들어갈 때 줄어드는 비율
+            rows.append({"image": n, "class": g["class"], "file": name,
+                         "size_px": [x2 - x1, y2 - y1],
+                         "share_of_image": round((x2 - x1) * (y2 - y1) / (h * w), 5),
+                         "size_at_model_input_640": [round((x2 - x1) * scale, 1), round((y2 - y1) * scale, 1)]})
+    return rows
+
+
 def main():
     models = Models()
     OUT.mkdir(parents=True, exist_ok=True)
@@ -79,6 +103,8 @@ def main():
         for reg in GT[n].get("mask_regions", []):
             cv2.polylines(g_img, [np.array(reg["polygon"], np.int32)], True, (0, 255, 255), 2)
         imwrite(OUT / f"gt_{Path(n).stem}.jpg", g_img)
+
+    report["small_objects"] = save_small_zooms(images)
 
     # ---------- A. 탐지 ----------
     for name, weights, imgsz, conf in METHODS:

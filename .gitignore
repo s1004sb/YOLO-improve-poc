@@ -12,3 +12,4 @@ data/samples/zidane.jpg
 outputs/poc/zidane/*.jpg
 outputs/poc/zidane/candidates/
 outputs/eval/gt_zidane.jpg
+outputs/eval/zoom_zidane*.jpg

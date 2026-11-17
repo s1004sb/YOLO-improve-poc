@@ -195,5 +195,35 @@
       "text_stage": "실행함"
     }
   ],
-  "text_stage": "실행함, 지목한 글자: ['bus', 'cell phone', 'person', 'tie']"
+  "text_stage": "실행함, 지목한 글자: ['bus', 'cell phone', 'person', 'tie']",
+  "small_objects": [
+    {
+      "image": "bus.jpg",
+      "class": "cell phone",
+      "file": "zoom_bus_cell_phone.jpg",
+      "size_px": [
+        21,
+        28
+      ],
+      "share_of_image": 0.00067,
+      "size_at_model_input_640": [
+        12.4,
+        16.6
+      ]
+    },
+    {
+      "image": "zidane.jpg",
+      "class": "tie",
+      "file": "zoom_zidane_tie.jpg",
+      "size_px": [
+        44,
+        108
+      ],
+      "share_of_image": 0.00516,
+      "size_at_model_input_640": [
+        22.0,
+        54.0
+      ]
+    }
+  ]
 }
